@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import Antd from 'ant-design-vue' //ant组件
+import './styles/main.css' //tailwind
 import 'ant-design-vue/dist/reset.css' //ant样式
 import App from './App.vue'
 import router from './router'

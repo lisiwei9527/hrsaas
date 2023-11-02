@@ -25,15 +25,16 @@ const onFinish = async (values) => {
 }
 </script>
 <template>
-  <div class="login-container">
-    <div class="logo">
-      <div class="icon"></div>
-      <img src="../../assets/胡桃可爱图标.jpg" width="300" alt="" />
-      <p>开箱即用的中后台管理系统</p>
+  <div class="flex h-screen items-stretch">
+    <div class="flex-[3] rounded-tr-3xl flex flex-col items-end justify-center px-[100px]">
+      <div class="w-80 h-12 mb-14"></div>
+      <img src="../../assets/胡桃可爱图标.jpg" class="w-[300px]" alt="" />
+      <p class="text-gray-50 text-lg mt-5 w-[300px] text-center">开箱即用的中后台管理系统</p>
     </div>
-    <div class="form">
-      <h3>iHRM 人力资源管理系统</h3>
-      <a-card class="login-card">
+
+    <div class="flex-[2] flex flex-col justify-center pl-[50px]">
+      <h3 class="pl-[30px] text-2xl">iHRM 人力资源管理系统</h3>
+      <a-card class="w-80 border-none p-0">
         <a-form :model="loginForm" @finish="onFinish">
           <a-form-item
             name="mobile"
@@ -65,7 +66,7 @@ const onFinish = async (values) => {
             <a-checkbox v-model:checked="loginForm.isAgree">请勾选用户协议</a-checkbox>
           </a-form-item>
           <a-form-item>
-            <a-button type="primary" html-type="submit">登录</a-button>
+            <a-button type="primary" class="bg-blue" html-type="submit">登录</a-button>
           </a-form-item>
         </a-form>
       </a-card>
@@ -73,47 +74,4 @@ const onFinish = async (values) => {
   </div>
 </template>
 
-<style lang="less">
-.login-container {
-  display: flex;
-  align-items: stretch;
-  height: 100vh;
-  .logo {
-    flex: 3;
-    border-top-right-radius: 60px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
-    padding: 0 100px;
-    .icon {
-      width: 300px;
-      height: 50px;
-      margin-bottom: 50px;
-    }
-    p {
-      color: #fff;
-      font-size: 18px;
-      margin-top: 20px;
-      width: 300px;
-      text-align: center;
-    }
-  }
-  .form {
-    flex: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 50px;
-    .ant-card {
-      width: 320px;
-      border: none;
-      padding: 0;
-    }
-    h3 {
-      padding-left: 30px;
-      font-size: 24px;
-    }
-  }
-}
-</style>
+<style lang="less"></style>
